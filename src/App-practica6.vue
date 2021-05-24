@@ -1,22 +1,20 @@
 <template>
     <div id="app">
-        <h1>Ejemplo de mapState</h1>
-        <p>{{ nombre }}</p>
+        <h1>Vuex basico Ejemplo contador</h1>
+        <Contador></Contador>
+        <LeerStore></LeerStore>
     </div>
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import Contador from './components/Contador.vue';
+import LeerStore from './components/LeerStore.vue';
     export default {
         name: 'App',
         components:{
-          
-        },
-        computed: mapState({
-            nombre: function(state){
-                return state.nombre
-            }
-        })
+            Contador,
+            LeerStore,
+        }
     }
 </script>
 
